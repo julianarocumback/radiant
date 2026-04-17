@@ -1,5 +1,14 @@
 export default function Logo() {
-    <div>
-        <span>Radiant</span>
-    </div>
+
+
+
+
+    return (
+        <div>
+            
+            <h1>Radiant</h1>
+            
+
+        </div>
+    )
 }
