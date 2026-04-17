@@ -13,7 +13,7 @@ export default function Hero() {
             <div className='order-1 md:order-0 flex flex-col my-1'>
                 <HeroContent/>
                 <div className='flex justify-center my-4'>
-                    <Button style={'bg-red-100 h-15 rounded-10'} texto={'Ver Nova Coleção'}><i class="fa-solid fa-star"></i></Button>
+                    <Button style={'bg-red-100 h-15 rounded-xl px-4'} texto={'Explorar Coleção'}><i class="fa-solid fa-star"></i></Button>
                 </div>
             </div>
             
