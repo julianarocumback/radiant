@@ -1,5 +1,5 @@
 export default function Email() {
     return (
-        <input type="email" />
+     <input className="bg-white py-4 px-6 w-70  border border-[#e2e8f0] rounded-4xl" type="email" placeholder="Seu melhor e-mail"/>
     )
 }
