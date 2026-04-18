@@ -1,14 +1,38 @@
-import About from "./about/About"
+import { useEffect, useState } from "react"
+import {MobileAbout, DesktopAbout} from "./about/About"
 import Navegation from "./navegation/Navegation"
 import Support from "./support/Support"
+import Localization from "./localization/Localization"
 
 
 export default function Footer() {
-    return (
-        <footer>
-            <About/>
-            <Navegation/>
-            <Support/>
-        </footer>
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(()=> {
+        const checkSize = () => {
+            setIsMobile(window.innerWidth < 768)
+        }
+        checkSize()
+
+        window.addEventListener('resize', checkSize)
+
+        return () => window.removeEventListener('resize', checkSize)
+    },[])
+
+    return(
+        <div className="bg-[#f8fafc]">
+            {isMobile? (
+                <footer className=" w-full h-full">
+                    <MobileAbout/>
+                </footer>
+            ): (
+                <footer className="w-full h-full grid grid-cols-4 gap-4 px-16 ">
+                <DesktopAbout/>
+                <Navegation/>
+                <Support/>
+                <Localization/>
+            </footer>
+            )}
+        </div>
     )
 }
