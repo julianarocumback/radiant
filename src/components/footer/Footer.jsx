@@ -10,7 +10,7 @@ export default function Footer() {
 
     useEffect(()=> {
         const checkSize = () => {
-            setIsMobile(window.innerWidth < 768)
+            setIsMobile(window.innerWidth < 1200)
         }
         checkSize()
 
