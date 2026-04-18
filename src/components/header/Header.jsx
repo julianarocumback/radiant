@@ -6,7 +6,7 @@ import Menu from "./menu/Menu"
 
 export default function Header() {
     return(
-        <header className="flex h-10 w-all bg-white/80 justify-between px-5 items-center">
+        <header className="flex h-14 w-all bg-white/80 justify-between px-5 items-center">
             <Menu/>
             <Logo/>
             <Login/>
