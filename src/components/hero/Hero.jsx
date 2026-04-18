@@ -19,7 +19,7 @@ export default function Hero() {
             </div>
             
             <span class="material-icons-outlined"></span>
-            <div>
+            <div className="flex justify-center">
                 <HeroFeature/>
             </div>
         </div>
