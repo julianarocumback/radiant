@@ -32,6 +32,6 @@ export default function Card(){
     })
 
     return (
-        <div className="flex gap-4 px-10">{cards}</div>
+        <div className="flex gap-4 ">{cards}</div>
     )
 }

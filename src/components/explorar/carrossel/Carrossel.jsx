@@ -4,7 +4,7 @@ export default function Carrossel() {
     
 
     return (
-        <div className="h-40 w-full bg-amber-600 flex justify-center items-center px-100 overflow-scroll">
+        <div className="h-40 sm:w-full bg-amber-600 flex justify-center items-center px-100 overflow-x-scroll">
             <Card/>
         </div>
     )
