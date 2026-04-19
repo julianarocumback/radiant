@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Carrossel, BentoGrid } from "./content/Content"
+import { Carrossel, Cards } from "./content/Content"
 
 
 export default function Testemunhos(){
@@ -19,7 +19,7 @@ export default function Testemunhos(){
 
     return (
         <section>
-            {isMobile? (<Carrossel/>):(<BentoGrid/>)}     
+            {isMobile? (<Carrossel/>):(<Cards/>)}     
         </section>
     )
 }
