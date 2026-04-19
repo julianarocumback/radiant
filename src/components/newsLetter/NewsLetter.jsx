@@ -8,7 +8,7 @@ export default function NewsLetter(){
                
                
                     <h2 className="text-xl lg:text-3xl">Receba Gotas de Inspiração</h2>
-                    <p>Inscreva-se para receber lançamentos <br/> exclusivos, reflexões semanais e descontos <br/> especiais em sua caixa de entrada.</p>
+                    <p className="text-sm lg:text-base">Inscreva-se para receber lançamentos <br/> exclusivos, reflexões semanais e descontos <br/> especiais em sua caixa de entrada.</p>
 
                     <div className="flex flex-col lg:flex-row py-2 px-20 lg:px-40 gap-4 justify-center items-center ">
                         <Email/>
