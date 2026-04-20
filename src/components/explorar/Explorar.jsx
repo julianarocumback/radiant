@@ -1,13 +1,22 @@
-import Card from "./Card/Card"
-import ExploreContent from "./exploreCotent/ExploreContent"
-import Carrossel from "./carrossel/Carrossel"
+import { useState, useEffect } from "react"
+import { Carrossel, BentoGrid } from "./exploreCotent/ExploreContent"
 
 export default function Explorar(){
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(()=> {
+        const checkSize = ()=>{
+            setIsMobile(window.innerWidth < 1200)
+        }
+        checkSize()
+
+        window.addEventListener('resize', checkSize)
+        return () => window.removeEventListener('resize', checkSize)
+
+    },[])
     return (
-        <div className="h-70 w-full bg-amber-300">
-            <ExploreContent/>
-            <Carrossel/>
-        
-        </div>
+        <section className="w-full py-24 px-86">
+            {isMobile? (<Carrossel/>): (<BentoGrid/>)}
+        </section>
     )
 }

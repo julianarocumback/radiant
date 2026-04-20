@@ -11,9 +11,9 @@ export default function Testemunhos(){
         }
         checkSize()
         
-            window.addEventListener('resize', checkSize)
-        
-            return ()=> window.removeEventListener('resize', checkSize)
+        window.addEventListener('resize', checkSize)
+    
+        return ()=> window.removeEventListener('resize', checkSize)
     },[])
 
 
