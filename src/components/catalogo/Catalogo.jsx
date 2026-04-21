@@ -31,7 +31,7 @@ export default function Catalogo(){
     return (
         <section className="">
             <div className="border border-blue-500 flex gap-6 px-80 py-30">
-                <div>
+                <div className="hidden lg:block">
                     <Filter/>
                 </div>
                 <div className="flex border flex-col gap-6 p-6">
