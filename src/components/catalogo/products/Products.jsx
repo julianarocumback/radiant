@@ -1,73 +1,26 @@
-import Order from "./order/Order"
-export default function Products(){
-    const lista = [
-        {
-            titulo: 'teste',
-            autor: '',
-            valor: '123',
-            freteGratis: false,
-            categoria: '',
-            desconto: false
-        },
-        {
-            titulo: 'teste2',
-            autor: '',
-            valor: '123',
-            freteGratis: false,
-            categoria: '',
-            desconto: false
-        },
-        {
-            titulo: 'teste2',
-            autor: '',
-            valor: '123',
-            freteGratis: false,
-            categoria: '',
-            desconto: false
-        },
-        {
-            titulo: 'teste2',
-            autor: '',
-            valor: '123',
-            freteGratis: false,
-            categoria: '',
-            desconto: false
-        },
-        {
-            titulo: 'teste2',
-            autor: '',
-            valor: '123',
-            freteGratis: false,
-            categoria: '',
-            desconto: false
-        },
+export default function Products({produtos, carregando}){
 
-    ]
-    const listaNova = lista.map(produto => {
+    const listaNova = produtos.map(produto => {
         return(
-            <div className="flex flex-col gap-4">
-                <div className="border h-100 rounded-2xl">
-                    <img src="" alt="" />
+            <div className="flex flex-col gap-4" key={produto.id}>
+                <div className="border h-100 rounded-2xl overflow-hidden">
+                    <img src={produto.img_url} alt="" />
                 </div>
                 <div>
-                    <p>{produto.titulo}</p>
-                    <p>{produto.valor}</p>
+                    <p>{produto.nome}</p>
+                    <p>{produto.valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>
+                    <p>{produto.livros.autor}</p>
+                    <p>{produto.livros.isbn}</p>
                 </div>  
             </div>
         )
     })
-    return(
-        <div className="border w-full flex flex-col p-10 gap-4">
-            <div className="flex justify-between">
-                {/* Colocar quantidade pelo banco */}
-                <span>Exibindo 'X' resultados</span>
-                <Order/>
-            </div>
-            <div className="h-[0.1px] w-full bg-black"></div>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8">
-                {/* produtos */}
-                {listaNova}
-            </div>
-        </div>
+    if (carregando) return <p>Carregando livros...</p>;
+    return (
+        
+    <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8">
+        {/* produtos */}
+        {listaNova}
+    </div>
     )
 }
