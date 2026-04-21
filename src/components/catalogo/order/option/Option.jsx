@@ -1,10 +1,9 @@
-export default function option() {
+export default function Option({setOrdem, ordemAtiva}) {
     return (
-        <select name="" id="">
-            <option value="">Lançamentos</option>
-            <option value="">Mais vendidos</option>
-            <option value="">Menor Preço</option>
-            <option value="">Maior Preço</option>
+        <select onChange={(e) => setOrdem(e.target.value)} value={ordemAtiva} className="bg-transparent border-b border-black py-1 focus:outline-none cursor-pointer" >
+            <option value="padrao">Todos</option>
+            <option value="menor-valor">Menor Preço</option>
+            <option value="maior-valor">Maior Preço</option>
         </select>
     )
 }

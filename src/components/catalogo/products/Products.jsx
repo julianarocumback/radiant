@@ -1,4 +1,15 @@
-export default function Products({produtos, carregando}){
+import Skeleton from "../skeleton/Skeleton";
+export default function Products({produtos, carregar}){
+
+    if (carregar) {
+        return (
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8">
+                {[...Array(8)].map((_, i) => <Skeleton key={i}/>)}
+            </div>
+        )
+    }
+
+    if (!produtos || produtos.length === 0) return <p>Nenhum livro encontrado.</p>;
 
     const listaNova = produtos.map(produto => {
         return(
@@ -15,12 +26,13 @@ export default function Products({produtos, carregando}){
             </div>
         )
     })
-    if (carregando) return <p>Carregando livros...</p>;
     return (
         
     <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8">
         {/* produtos */}
         {listaNova}
+        
+
     </div>
     )
 }
