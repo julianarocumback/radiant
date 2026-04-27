@@ -13,15 +13,15 @@ export default function Products({produtos, carregar}){
 
     const listaNova = produtos.map(produto => {
         return(
-            <div className="flex flex-col gap-4" key={produto.id}>
-                <div className="border h-100 rounded-2xl overflow-hidden">
-                    <img src={produto.img_url} alt="" />
+            <div className="flex flex-col gap-4 cursor-pointer" key={produto.id}>
+                <div className="h-100 rounded-2xl overflow-hidden shadow-xl ">
+                    <img  className="object-cover h-full w-full" src={produto.img_url} alt={produto.nome} />
                 </div>
-                <div>
-                    <p>{produto.nome}</p>
-                    <p>{produto.valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</p>
-                    <p>{produto.livros.autor}</p>
-                    <p>{produto.livros.isbn}</p>
+                <div className="flex  flex-col">
+                    <span className="text-xs uppercase text-gray-400 font-semibold">{produto.livros.autor}</span>
+                    <span className="text-xs uppercase text-gray-400 font-semibold">{produto.categoria}</span>
+                    <span className="font-semibold text-lg">{produto.nome}</span>
+                    <span className="font-semibold text-lg text-blue-700">{produto.valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
                 </div>  
             </div>
         )
@@ -29,10 +29,7 @@ export default function Products({produtos, carregar}){
     return (
         
     <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-8">
-        {/* produtos */}
         {listaNova}
-        
-
     </div>
     )
 }
