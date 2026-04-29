@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Skeleton from "../skeleton/Skeleton";
 export default function Products({produtos, carregar}){
 
@@ -22,6 +23,8 @@ export default function Products({produtos, carregar}){
                     <span className="text-xs uppercase text-gray-400 font-semibold">{produto.categoria}</span>
                     <span className="font-semibold text-lg">{produto.nome}</span>
                     <span className="font-semibold text-lg text-blue-700">{produto.valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+                    <Link to={`/livro/${produto.id}`}>teste</Link>
+
                 </div>  
             </div>
         )

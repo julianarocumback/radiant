@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Filter({lista, setCategoria}){
 
     const categorias = [...new Set(lista.map(item => item.categoria))].map(item => <div onClick={() => setCategoria(item)}>{item}</div>)
@@ -7,6 +9,9 @@ export default function Filter({lista, setCategoria}){
             <div>
                 <div className="flex flex-col" onClick={() => setCategoria('Todos')}>Todos</div>
                 {categorias}
+            </div>
+            <div>
+                <Link to='/livro'>teste</Link>
             </div>
         </div>
     )
