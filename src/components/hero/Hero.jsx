@@ -1,6 +1,4 @@
 import { MdOutlineAutoAwesome } from "react-icons/md";
-
-
 import Badge from "./badge/Badge"
 import Button from "./button/Button"
 import HeroContent from "./heroContent/HeroCotent"

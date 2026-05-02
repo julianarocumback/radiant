@@ -1,0 +1,38 @@
+import { MdOutlineAutoAwesome } from "react-icons/md";
+import Badge from "./badge/Badge";
+import Price from "./price/Price";
+import Cart from "./cart/Cart";
+import Favorite from "./favorite/Favorite";
+import Title from "./title/Title";
+import Info from "./info/Info";
+import Divisor from "./divisor/Divisor";
+
+
+export default function ProductInfo({produto}){
+    return(
+        <div className="w-full flex flex-col justify-center">
+            <Badge/>
+            <div className="py-4">
+                <Title produto={produto}/>
+            </div>
+
+            <Price produto={produto}/>
+            <Divisor/>
+            <Info/>
+            <div className="flex flex-col py-10 gap-4">
+                <Cart/>
+                <Favorite/>
+            </div>
+            <div className="flex gap-8">
+                <div className="flex gap-2">
+                    <div className="text-blue-800"><i className="fa-regular fa-truck"></i></div>
+                    <div>Frete Grátis para o Sul</div>      
+                </div>
+                <div className="flex gap-2">
+                    <div className="text-blue-800"><i className="fa-regular fa-circle-check"></i></div>
+                    <div>Garantia Vitalícia</div>      
+                </div>
+            </div>
+        </div>
+    )
+}

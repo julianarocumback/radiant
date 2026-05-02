@@ -8,7 +8,7 @@ import NewsLetter from "./components/newsLetter/NewsLetter";
 import Explorar from "./components/explorar/Explorar";
 import Catalogo from "./components/catalogo/Catalogo";
 
-import Produto from './pages/Produto'
+import Produto from './pages/product/Product'
 
 export default function MainRoutes(){
     return (
