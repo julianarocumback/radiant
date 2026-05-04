@@ -1,0 +1,31 @@
+import Specifications from "./specifications/Specifications"
+import Box from "./box/Box"
+import Warning from "./warning/Warning"
+
+export default function ProductDetails({produto}){
+    return (
+        <div className="h-full w-full py-30 bg-[rgba(243,243,245,1)] px-90">
+            <div className="flex flex-col gap-10">
+                <h2 className="text-2xl font-semibold">Detalhes</h2>
+
+                <div className="flex gap-8">
+                    <div className="w-full flex flex-col gap-10">
+                        <h3 className="text-xl font-bold">Especificações</h3>
+                        <div className="w-full shadow-sm rounded-2xl border border-gray-200/20">
+                            <Specifications produto={produto}/>
+                        </div>
+                    </div>
+                    <div className="w-full flex flex-col gap-10">
+                        <h3 className="text-xl font-bold">O que há na caixa</h3>
+                        <div className="w-full shadow-sm rounded-2xl border border-gray-200/20">
+                            <Box/>
+                        </div>
+                        <Warning/>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    )
+}
