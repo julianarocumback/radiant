@@ -43,7 +43,7 @@ export default function Product(){
     return(
     <div className="h-screen w-full bg-[rgba(249,249,251,1)] relative">
             <Header/>
-            <main className="px-4 lg:px-90 py-20">
+            <main className="px-8 lg:px-90 py-20">
                 <ProductHero foto={foto} gallery={gallery} setIdFoto={setIdFoto} produto={produto}/>
                         
             </main>
