@@ -9,7 +9,7 @@ export default function ProductGallery({foto, gallery, setIdFoto}){
 
     const galeria = gallery.map(item => {
         return(
-            <div className="border border-gray-200 cursor-pointer" key={item?.id} onClick={()=> alterarImagem(item?.id)}>
+            <div className="border border-gray-200 cursor-pointer rounded-2xl overflow-hidden" key={item?.id} onClick={()=> alterarImagem(item?.id)}>
                 <img className="object-cover h-full w-full" src={item?.url} alt="" />
             </div>
         )

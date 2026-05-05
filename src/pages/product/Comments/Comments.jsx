@@ -4,7 +4,7 @@ import Title from "./title/Title"
 
 export default function Comments(){
     return (
-        <div className="bg-[rgba(249,249,251,1)] px-90 h-screen w-full relative flex flex-col justify-center">
+        <div className="bg-[rgba(249,249,251,1)] px-90 h-screen w-full relative flex flex-col justify-center border">
             <Title/>
             <div className="flex gap-8">
                 <Resume/>

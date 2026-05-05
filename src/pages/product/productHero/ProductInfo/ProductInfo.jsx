@@ -23,7 +23,7 @@ export default function ProductInfo({produto}){
                 <Cart/>
                 <Favorite/>
             </div>
-            <div className="flex gap-8">
+            <div className="lg:flex lg:gap-8 hidden">
                 <div className="flex gap-2">
                     <div className="text-blue-800"><i className="fa-regular fa-truck"></i></div>
                     <div>Frete Grátis para o Sul</div>      

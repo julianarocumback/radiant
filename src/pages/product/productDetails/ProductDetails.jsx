@@ -4,7 +4,8 @@ import Warning from "./warning/Warning"
 
 export default function ProductDetails({produto}){
     return (
-        <div className="h-full w-full py-30 bg-[rgba(243,243,245,1)] px-90">
+        
+        <div className="h-full w-full py-30 bg-[rgba(243,243,245,1)] px-90 border">
             <div className="flex flex-col gap-10">
                 <h2 className="text-2xl font-semibold">Detalhes</h2>
 

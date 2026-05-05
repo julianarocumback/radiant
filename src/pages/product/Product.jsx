@@ -41,14 +41,11 @@ export default function Product(){
     }
     
     return(
-    <div className="h-screen w-full bg-[rgba(249,249,251,1)] relative">
-            <Header/>
-            <main className="px-8 lg:px-90 py-20">
-                <ProductHero foto={foto} gallery={gallery} setIdFoto={setIdFoto} produto={produto}/>
-                        
-            </main>
-            <ProductDetails produto={produto}/>
-            <Comments/>
+    <div className="h-full w-full bg-[rgba(249,249,251,1)]">
+        <Header/>
+        <ProductHero foto={foto} gallery={gallery} setIdFoto={setIdFoto} produto={produto}/>
+        <ProductDetails produto={produto}/>
+        <Comments/>
     </div>
 )
 }
