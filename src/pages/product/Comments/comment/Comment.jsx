@@ -7,11 +7,7 @@ export default function Comment(){
             <div className="flex gap-4 flex-col">
                 <Card/>
                 <Card/>
-
             </div>
-            
-          
-           
         </div>
     )
 }
